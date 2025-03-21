@@ -1,6 +1,12 @@
-package com.saurabhtech.learn_spring_boot.course;
+package com.saurabhtech.learn_spring_boot.learnConcepts.course;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+
+    @Id
     private long id;
     private String course;
     private String author;
@@ -9,6 +15,9 @@ public class Course {
         this.id = id;
         this.course = course;
         this.author = author;
+    }
+
+    public Course() {
     }
 
     public long getId() {
@@ -21,6 +30,18 @@ public class Course {
 
     public String getAuthor() {
         return author;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     @Override
